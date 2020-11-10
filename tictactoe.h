@@ -6,8 +6,8 @@ class TicTacToe {
 
     public:
     void drawBoard();
-    void checkWin();
+    int checkWin();
     void makeMove(char player);
     void togglePlayer(char player);
-    void gameStart();
+    void startGame();
 };

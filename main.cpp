@@ -8,7 +8,7 @@ int main()
 {
     TicTacToe game;
 
-    game.startGame()
+    game.startGame();
 
     return 0;
 }
