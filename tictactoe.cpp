@@ -27,31 +27,31 @@ void TicTacToe::makeMove(char player) {
     cin >> move
 
     if( move = 1) {
-		board[0][0] = player;
+		gameBoard[0][0] = player;
 	}
 	else if(move = 2) {
-		board[0][1] = player;
+		gameBoard[0][1] = player;
 	}
 	else if(move = 3) {
-		board[0][2] = player;
+		gameBoard[0][2] = player;
 	}
 	else if(move = 4) {
-		board[1][0] = player;
+		gameBoard[1][0] = player;
 	}
 	else if(move = 5) {
-		board[1][1] = player;
+		gameBoard[1][1] = player;
 	}
 	else if(move = 6) {
-		board[1][2] = player;
+		gameBoard[1][2] = player;
 	}
 	else if(move = 7) {
-		board[2][0] = player;
+		gameBoard[2][0] = player;
 	}
 	else if(move = 8) {
-		board[2][1] = player;
+		gameBoard[2][1] = player;
 	}
 	else if(move = 9) {
-		board[2][2] = player;
+		gameBoard[2][2] = player;
 	}
 }
 
@@ -60,6 +60,38 @@ void TicTacToe::togglePlayer(char player) {
         player = "O";
     else if(player == "O")
         player = "X";
+}
+
+void TicTacToe::checkWin() {
+    if (gameBoard[0][0] == gameBoard[0][1] && gameBoard[0][1] == gameBoard[0][2])
+
+        return 1;
+    else if (gameBoard[1][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[1][2])
+
+        return 1;
+    else if (gameBoard[2][0] == gameBoard[2][1] && gameBoard[2][1] == gameBoard[2][2])
+
+        return 1;
+    else if (gameBoard[0][0] == gameBoard[1][0] && gameBoard[1][0] == gameBoard[2][0])
+
+        return 1;
+    else if (gameBoard[0][1] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][1])
+
+        return 1;
+    else if (gameBoard[0][2] == gameBoard[1][2] && gameBoard[1][2] == gameBoard[2][2])
+
+        return 1;
+    else if (gameBoard[0][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][2])
+
+        return 1;
+    else if (gameBoard[0][2] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][0])
+
+        return 1;
+    else if (gameBoard[0][0] != '1' && gameBoard[0][1] != '2' && gameBoard[0][2] != '3' && gameBoard[1][0] != '4' && gameBoard[1][1] != '5' && gameBoard[1][2] != '6' && gameBoard[2][0] != '7' && gameBoard[2][1] != '8' && gameBoard[2][2] != '9')
+
+        return 0;
+    else
+        return -1;
 }
 
 }
