@@ -56,10 +56,10 @@ void TicTacToe::makeMove(char player) {
 }
 
 void TicTacToe::togglePlayer(char player) {
-    if (player == "X")
-        player = "O";
-    else if(player == "O")
-        player = "X";
+    if (player == 'X')
+        player = 'O';
+    else if(player == 'O')
+        player = 'X';
 }
 
 int TicTacToe::checkWin() {
@@ -97,7 +97,7 @@ int TicTacToe::checkWin() {
 void TicTacToe::startGame() {
     
     int i = checkWin();
-    char player = "X";
+    char player = 'X';
 
     while(i == -1) {
         drawBoard();
